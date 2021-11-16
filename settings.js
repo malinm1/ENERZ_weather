@@ -70,15 +70,15 @@ if (process.env.NODE_RED_a_USERNAME && process.env.NODE_RED_b_PASSWORD) {
     settings.adminAuth = {
         type: "credentials",
         users: function(username) {
-            if (process.env.NODE_RED_a_USERNAME == username) {
+            if (process.env.enerz == username) {
                 return when.resolve({username:username,permissions:"*"});
             } else {
                 return when.resolve(null);
             }
         },
         authenticate: function(username, password) {
-            if (process.env.NODE_RED_a_USERNAME == username &&
-                process.env.NODE_RED_b_PASSWORD == password) {
+            if (process.env.enerz == username &&
+                process.env.enerz-team5 == password) {
                 return when.resolve({username:username,permissions:"*"});
             } else {
                 return when.resolve(null);
